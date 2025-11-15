@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Gallery | CodeAlpha Task 1</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Responsive Image Gallery</h1>
+        <p class="hint">Click any image to view in lightbox • Use ← → or Esc keys</p>
+      </div>
+
+      <div class="controls">
+        <div class="filters">
+          <button class="filter active" data-cat="all">All</button>
+          <button class="filter" data-cat="nature">Nature</button>
+          <button class="filter" data-cat="people">People</button>
+          <button class="filter" data-cat="tech">Tech</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="gallery" id="gallery"></section>
+    </main>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lb-inner">
+      <button class="nav prev" id="prevBtn">‹</button>
+      <button class="nav next" id="nextBtn">›</button>
+      <button class="close-btn" id="closeBtn">✕</button>
+
+      <div class="lb-img">
+        <img id="lbImgTag" src="" alt="" />
+      </div>
+      <div class="caption" id="lbCaption"></div>
+
+      <!-- Bonus Filter Controls -->
+      <div class="filter-controls">
+        <label>Filter:</label>
+        <select id="filterType">
+          <option value="none">None</option>
+          <option value="grayscale(100%)">Grayscale</option>
+          <option value="sepia(100%)">Sepia</option>
+          <option value="blur(3px)">Blur</option>
+        </select>
+        <button id="downloadBtn">Download</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body
